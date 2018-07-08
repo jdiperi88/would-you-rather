@@ -11,7 +11,7 @@ class Login extends Component{
     }
     render(){
         return(
-            <div>
+            <div  className='login-container container'>
                 <div>
                     <h1>WELCOME TO WOULD YOU RATHER????</h1>
                     <h2>Please log in to continue</h2>
@@ -24,8 +24,6 @@ class Login extends Component{
                     <option value="none" selected>Please Select A User</option>
                     <option value="Joey">Joey</option>
                 </select>
-
-
             </div>
         )
     }
