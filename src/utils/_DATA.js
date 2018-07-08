@@ -1,5 +1,5 @@
 let users = {
-  sarahedo: {
+  jdiperi: {
     id: 'jdiperi',
     name: 'Joey DiPeri',
     avatarURL: '../images/sample_avatar.jpg',
@@ -11,7 +11,7 @@ let users = {
     },
     questions: ['8xf0y6ziyjabvozdd253nd', 'am8ehyc8byjqgar0jgpub9']
   },
-  tylermcginnis: {
+  sdiperi: {
     id: 'sdiperi',
     name: 'Saida DiPeri',
     avatarURL: '../images/sample_avatar.jpg',
@@ -21,7 +21,7 @@ let users = {
     },
     questions: ['loxhs1bqm25b708cmbf3g', 'vthrdm985a262al8qx3do'],
   },
-  johndoe: {
+  tmac: {
     id: 'tmac',
     name: 'Tyrone Sanderson',
     avatarURL: '../images/sample_avatar.jpg',

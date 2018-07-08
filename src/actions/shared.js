@@ -1,5 +1,6 @@
 import { receiveUsers } from "./users";
 import {_getUsers} from '../utils/_DATA'
+import { setAuthedUser } from '../actions/authedUser'
 
 
 export function handleInitialData(){
@@ -10,4 +11,3 @@ export function handleInitialData(){
                 })
     }
 }
-receiveUsers
