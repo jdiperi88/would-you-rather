@@ -10,11 +10,11 @@ class Login extends Component{
         dispatch(handleSetAuthedUser(id))
     }
     render(){
+        const {users,ids} = this.props
         return(
             <div  className='login-container container'>
                 <div>
                     <h1>WELCOME TO WOULD YOU RATHER????</h1>
-                    <h2>Please log in to continue</h2>
                 </div>
                 <img src={require('../images/sample_avatar.jpg')} />
                 <label for="log-in">Sign In</label>
@@ -22,12 +22,28 @@ class Login extends Component{
                     this.handleLoginSelection(e)
                 }}>
                     <option value="none" selected>Please Select A User</option>
-                    <option value="Joey">Joey</option>
+                    {users && ids.map((id)=>{
+
+                        return <option value={id[0]}>{id[1]}</option>
+                    })}
+                    
+                    
+                    
                 </select>
+                {}
             </div>
         )
     }
 }
 
+const mapStateToProps = ({users,names},props) =>{
+     var ids = Object.keys(users).map((e)=>{
+        return [e,users[e].name]
+     })
+    return {
+        users,
+        ids,
+    }
+}
 
-export default connect()(Login) 
+export default connect(mapStateToProps)(Login) 
