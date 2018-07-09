@@ -3,5 +3,5 @@ import users from './users';
 import authedUser from './authedUser'
 export default combineReducers({
     users,
-    authedUser
+    authedUser,
 })
