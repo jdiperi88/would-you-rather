@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { handleSetAuthedUser } from '../actions/authedUser'
+
 class Header extends Component{
+    handleLogOut =() =>{
+        const { dispatch } = this.props
+        dispatch(handleSetAuthedUser('none'))
+    }
     render(){
         const { authedUser } = this.props
         return(
@@ -24,7 +30,9 @@ class Header extends Component{
                         <p>Hello, {authedUser} </p>
                         &nbsp;
                         &nbsp;
-                        <a>Logout</a>
+                        <a onClick={()=>{
+                            this.handleLogOut();
+                        }}>Logout</a>
                     </div>
                     }
 
