@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Gaegu:400,700");
 /* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
  * License: none (public domain) */
@@ -7,7 +8,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  font-family: 'Gaegu', cursive; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -87,3 +89,24 @@ header {
     margin-top: 20px; }
   .login-container select {
     margin-top: 5px; }
+
+.question-list-container {
+  border: black solid 10px;
+  min-height: 10vh; }
+  .question-list-container h1 {
+    text-transform: uppercase; }
+  .question-list-container .question-container {
+    border: red solid 2px;
+    width: 75%;
+    margin: 0 auto; }
+    .question-list-container .question-container .question-details {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .question-list-container .question-container .question-details > div {
+        flex: 4;
+        text-align: center; }
+    .question-list-container .question-container img {
+      width: 100px;
+      border-radius: 30px;
+      flex: 1; }

@@ -1,5 +1,5 @@
 import { receiveUsers } from "./users";
-import {_getUsers} from '../utils/_DATA'
+import {_getUsers, _getQuestions} from '../utils/_DATA'
 import { setAuthedUser } from '../actions/authedUser'
 
 
