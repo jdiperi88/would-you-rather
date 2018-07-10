@@ -11,6 +11,7 @@ class QuestionContainer extends Component{
         const { questionsArr } = this.props
         return(
             <div className='question-list-container container'>
+            <h1>QUESTION CONTAINER</h1>
                 {questionsArr.map(item=>{
                     return <Question key={item.id} question={item} />
                 })}

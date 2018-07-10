@@ -1,20 +1,26 @@
 .question-list-container
-    border: black solid 10px
+    border: $dark-grey solid 2px
     min-height: 10vh
     h1
         text-transform: uppercase
     .question-container
-        border: red solid 2px
-        width: 75%
-        margin: 0 auto
+        border: black solid 2px
+        box-shadow: 5px 5px 20px black
+        border-radius: 5px
+        width: 50%
+        margin: 20px auto
+        h1 
+            background: $grey
         .question-details
+            background: rgba(221,237,233,.2)
             display: flex
             justify-content: center
             align-items: center
             > div
-                flex: 4;
-                text-align: center;
+                flex: 4
+                text-align: center
         img
             width: 100px
             border-radius: 30px
             flex: 1
+            padding: 20px
