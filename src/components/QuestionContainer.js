@@ -4,28 +4,73 @@ import { handle_get_questions } from '../actions/questions'
 import Question from './Question';
 
 class QuestionContainer extends Component{
+    state = {
+        answered: false
+    }
     componentDidMount(){
         this.props.dispatch(handle_get_questions());
     }
+
+    handleAnswerChange=(answer)=>{
+        this.setState({
+            answered: answer
+        })
+    }
     render(){
-        const { questionsArr } = this.props
+        const { questionsArr, authedUser, answeredArr, unansweredArr } = this.props
+        const { answered } = this.state
         return(
             <div className='question-list-container container'>
+            <button onClick={()=> this.handleAnswerChange(false)}>UNANSWERED</button>
+            <button onClick={()=> this.handleAnswerChange(true)}>ANSWERED</button>
             <h1>QUESTION CONTAINER</h1>
-                {questionsArr.map(item=>{
-                    return <Question key={item.id} question={item} />
-                })}
+                {answered 
+                ?
+                answeredArr.map(item=>{
+
+                    return <Question 
+                                key={item.id} 
+                                question={item}
+                                user = {authedUser}
+                                answered = { answered }
+                                authedUser = {authedUser}
+                                 
+                            />
+                })
+                :
+                unansweredArr.map(item=>{
+
+                    return <Question 
+                                key={item.id} 
+                                question={item}
+                                user = {authedUser}
+                                answered = { answered }
+                                authedUser = {authedUser}
+                                 
+                            />
+                })
+                }
             </div>
         )
     }
 }
-const mapStateToProps = ({questions}) =>{
+const mapStateToProps = ({questions, authedUser}) =>{
     // const questionsArr = Object.keys(questions).map(item=>{
     //     return {questionsArr[0][item]: questions.item}
     // })
     const questionsArr = Object.values(questions)
+    const answeredArr = questionsArr.filter(item=>{
+        return item.optionOne.votes.indexOf(authedUser) >=0 || item.optionTwo.votes.indexOf(authedUser) >=0
+     })
+     const answeredIds = answeredArr.map(item=> item.id)
+     const unansweredArr = questionsArr.filter(item=>{
+        return answeredIds.indexOf(item.id) < 0
+     })
     return {
-        questionsArr
+        questionsArr,
+        authedUser,
+        answeredArr,
+        unansweredArr,
     }
 }
 export default connect(mapStateToProps)(QuestionContainer)

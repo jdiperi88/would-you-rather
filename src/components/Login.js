@@ -36,7 +36,7 @@ class Login extends Component{
     }
 }
 
-const mapStateToProps = ({users,names},props) =>{
+const mapStateToProps = ({users},props) =>{
      var ids = Object.keys(users).map((e)=>{
         return [e,users[e].name]
      })
