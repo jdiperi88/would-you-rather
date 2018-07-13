@@ -95,6 +95,16 @@ header {
   min-height: 10vh; }
   .question-list-container h1 {
     text-transform: uppercase; }
+  .question-list-container .answered-row {
+    display: flex;
+    justify-content: center; }
+    .question-list-container .answered-row > button {
+      flex: 1;
+      color: black;
+      font-size: 2rem; }
+    .question-list-container .answered-row .active {
+      background: #5b584e;
+      color: #d79d02; }
   .question-list-container .question-container {
     border: black solid 2px;
     box-shadow: 5px 5px 20px black;

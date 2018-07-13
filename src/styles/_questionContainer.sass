@@ -1,8 +1,18 @@
 .question-list-container
-    border: $dark-grey solid 2px
+    border: $light-grey solid 2px
     min-height: 10vh
     h1
         text-transform: uppercase
+    .answered-row
+        display: flex
+        justify-content: center
+        > button
+            flex: 1
+            color: black
+            font-size: 2rem
+        .active
+            background: $dark-grey
+            color: $gold
     .question-container
         border: black solid 2px
         box-shadow: 5px 5px 20px black
