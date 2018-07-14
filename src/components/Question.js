@@ -8,7 +8,6 @@ class Question extends Component{
         const option2 = Object.values(optionTwo)
         const answer1 = optionOne.votes
         const answer2 = optionTwo.votes
-        console.log(answer2)
         return(
             
             <div className='question-container'>

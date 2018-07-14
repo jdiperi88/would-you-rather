@@ -4,6 +4,7 @@ import { handleInitialData } from '../actions/shared';
 import Login from './Login'
 import Header from './Header';
 import QuestionContainer from './QuestionContainer';
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
 
 class App extends Component {
 
@@ -12,14 +13,36 @@ class App extends Component {
   }
 
   render() {
+    const { authedUser } = this.props
     return (
-      <div className="App">
-        <Header />
-        <Login />
-        <QuestionContainer /> 
-      </div>
+      <Router>
+        <Switch>
+          <div className="App">
+            <Header />
+            <Route exact path='/' render={()=>(
+              authedUser === 'none'
+              ?
+                <Login />
+              :
+                <Redirect to='/dashboard' />
+            )
+            } />
+            {
+            authedUser === 'none'
+            ?
+            <Redirect to='/' />
+            :
+            < Route exact path='/dashboard' component={QuestionContainer} />
+            } 
+          </div>
+        </Switch>
+      </Router>
     );
   }
 }
-
-export default connect()(App);
+const mapStateToProps = ({authedUser}) => {
+  return {
+    authedUser
+  }
+}
+export default connect(mapStateToProps)(App);

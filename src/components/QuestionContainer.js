@@ -21,17 +21,17 @@ class QuestionContainer extends Component{
         const { answered } = this.state
         return(
             <div className='question-list-container container'>
-            <div className={`answered-row`}>
-                <button 
-                    onClick={()=> this.handleAnswerChange(false)}
-                    className={`${answered ? '' : 'active'}`}
-                >UNANSWERED</button>
-                <button 
-                    onClick={()=> this.handleAnswerChange(true)}
-                    className={`${answered ? 'active':''}`}
-                >ANSWERED</button>
-            </div>
-            <h1>QUESTION CONTAINER</h1>
+                <h1>{authedUser}'s QUESTIONS</h1>
+                <div className={`answered-row`}>
+                    <button 
+                        onClick={()=> this.handleAnswerChange(false)}
+                        className={`${answered ? '' : 'active'}`}
+                    >UNANSWERED</button>
+                    <button 
+                        onClick={()=> this.handleAnswerChange(true)}
+                        className={`${answered ? 'active':''}`}
+                    >ANSWERED</button>
+                </div>
                 {answered 
                 ?
                 answeredArr.map(item=>{
