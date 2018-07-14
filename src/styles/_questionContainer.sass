@@ -3,6 +3,7 @@
     min-height: 10vh
     h1
         text-transform: uppercase
+
     .answered-row
         display: flex
         justify-content: center
@@ -10,28 +11,44 @@
             flex: 1
             color: black
             font-size: 2rem
-            font-family: 'Gaegu', cursive
+
         .active
             background: $dark-grey
             color: $gold
-    .question-container
-        border: black solid 2px
-        box-shadow: 5px 5px 20px black
-        border-radius: 5px
-        width: 50%
-        margin: 20px auto
-        h1 
-            background: $grey
-        .question-details
-            background: rgba(221,237,233,.2)
-            display: flex
-            justify-content: center
-            align-items: center
-            > div
-                flex: 4
-                text-align: center
-        img
-            width: 100px
-            border-radius: 30px
-            flex: 1
-            padding: 20px
+.question-container
+    border: black solid 2px
+    box-shadow: 5px 5px 20px black
+    border-radius: 5px
+    width: 50%
+    margin: 20px auto
+    h1 
+        background: $grey
+        padding: 10px
+        text-transform: uppercase
+    .question-details
+        background: rgba(221,237,233,.2)
+        display: flex
+        justify-content: center
+        align-items: center
+        button
+            background: $gold
+            padding: 10px
+            font-size: 1rem
+            margin-top: 10px
+            border-radius: 10px
+            display: block
+            margin: 10px auto
+        > div
+            flex: 4
+            text-align: center
+            p  
+                margin-top: 10px
+                font-size: 1.2rem
+                text-align: left
+                padding-left: 20px
+    img
+        width: 100px
+        border-radius: 30px
+        flex: 1
+        padding: 20px
+        

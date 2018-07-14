@@ -38,7 +38,8 @@ class QuestionContainer extends Component{
                 answeredArr.map(item=>{
 
                     return <Question 
-                                key={item.id}   
+                                key={item.id}
+                                id={item.id}   
                                 question={item}
                                 user = {authedUser}
                                 answered = { answered }
@@ -50,7 +51,8 @@ class QuestionContainer extends Component{
                 unansweredArr.map(item=>{
 
                     return <Question 
-                                key={item.id} 
+                                key={item.id}
+                                id={item.id}   
                                 question={item}
                                 user = {authedUser}
                                 answered = { answered }

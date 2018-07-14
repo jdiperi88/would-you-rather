@@ -12,6 +12,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-family: 'Gaegu', cursive; }
 
 /* HTML5 display-role reset for older browsers */
+button, a {
+  font-family: 'Gaegu', cursive;
+  cursor: pointer; }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
 
@@ -115,37 +119,53 @@ header {
     .question-list-container .answered-row > button {
       flex: 1;
       color: black;
-      font-size: 2rem;
-      font-family: 'Gaegu', cursive; }
+      font-size: 2rem; }
     .question-list-container .answered-row .active {
       background: #5b584e;
       color: #d79d02; }
-  .question-list-container .question-container {
-    border: black solid 2px;
-    box-shadow: 5px 5px 20px black;
-    border-radius: 5px;
-    width: 50%;
-    margin: 20px auto; }
-    .question-list-container .question-container h1 {
-      background: #ddede9; }
-    .question-list-container .question-container .question-details {
-      background: rgba(221, 237, 233, 0.2);
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .question-list-container .question-container .question-details > div {
-        flex: 4;
-        text-align: center; }
-    .question-list-container .question-container img {
-      width: 100px;
-      border-radius: 30px;
-      flex: 1;
-      padding: 20px; }
+
+.question-container {
+  border: black solid 2px;
+  box-shadow: 5px 5px 20px black;
+  border-radius: 5px;
+  width: 50%;
+  margin: 20px auto; }
+  .question-container h1 {
+    background: #ddede9;
+    padding: 10px;
+    text-transform: uppercase; }
+  .question-container .question-details {
+    background: rgba(221, 237, 233, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .question-container .question-details button {
+      background: #d79d02;
+      padding: 10px;
+      font-size: 1rem;
+      margin-top: 10px;
+      border-radius: 10px;
+      display: block;
+      margin: 10px auto; }
+    .question-container .question-details > div {
+      flex: 4;
+      text-align: center; }
+      .question-container .question-details > div p {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        text-align: left;
+        padding-left: 20px; }
+  .question-container img {
+    width: 100px;
+    border-radius: 30px;
+    flex: 1;
+    padding: 20px; }
 
 .new-question-container {
   border: #cfd2ce solid 2px;
   max-width: 600px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  box-shadow: 3px 3px 10px black; }
   .new-question-container h1 {
     font-size: 2rem;
     background: #ddede9;
