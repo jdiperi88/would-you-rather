@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { handle_get_questions } from '../actions/questions'
 import Question from './Question';
+import Loader from './Loader';
 
 class QuestionContainer extends Component{
     state = {
