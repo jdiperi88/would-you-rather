@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { handleSetAuthedUser } from '../actions/authedUser'
+import { Link } from 'react-router-dom'
 
 class Header extends Component{
     handleLogOut =() =>{
@@ -14,10 +15,10 @@ class Header extends Component{
                 <nav>
                     <ul>
                         <li>
-                            Home
+                            <Link to='/' >Dashboard</Link>
                         </li>
                         <li>
-                            New Question
+                            <Link to='/new' >New Question</Link>
                         </li>
                         <li>
                             Leaderboard
@@ -30,9 +31,9 @@ class Header extends Component{
                         <p>Hello, {authedUser} </p>
                         &nbsp;
                         &nbsp;
-                        <a onClick={()=>{
+                        <Link to='/'  onClick={()=>{
                             this.handleLogOut();
-                        }}>Logout</a>
+                        }}>Logout</Link>
                     </div>
                     }
 

@@ -5,6 +5,7 @@ import Login from './Login'
 import Header from './Header';
 import QuestionContainer from './QuestionContainer';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
+import New_Question from './New_Question';
 
 class App extends Component {
 
@@ -27,13 +28,15 @@ class App extends Component {
                 <Redirect to='/dashboard' />
             )
             } />
-            {
+            {/* {
             authedUser === 'none'
             ?
             <Redirect to='/' />
             :
             < Route exact path='/dashboard' component={QuestionContainer} />
-            } 
+            } */}
+            < Route exact path='/new' component={New_Question} />
+            < Route exact path='/dashboard' component={QuestionContainer} /> 
           </div>
         </Switch>
       </Router>

@@ -126,3 +126,19 @@ header {
       border-radius: 30px;
       flex: 1;
       padding: 20px; }
+
+.new-question-container {
+  border: #cfd2ce solid 2px;
+  max-width: 600px;
+  padding: 20px; }
+  .new-question-container h1 {
+    font-size: 2rem; }
+  .new-question-container input {
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+    padding: 5px; }
+  .new-question-container button {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px; }
