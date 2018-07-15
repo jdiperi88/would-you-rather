@@ -18,6 +18,9 @@ button, a {
   cursor: pointer;
   text-decoration: none; }
 
+button:focus {
+  outline: none; }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
 
@@ -88,7 +91,7 @@ header {
       align-items: center;
       flex: 1; }
     header nav > div {
-      padding-right: 10px;
+      padding-right: 30px;
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -120,8 +123,10 @@ header {
   min-height: 10vh;
   max-width: 800px;
   margin-top: 20px; }
-  .question-list-container h1 {
-    text-transform: uppercase; }
+  .question-list-container > h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 10px; }
   .question-list-container .answered-row {
     display: flex;
     justify-content: center; }
@@ -211,7 +216,8 @@ header {
   margin-right: 10px; }
 
 .answer-poll-container .answer-poll-row {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-right: 10px; }
   .answer-poll-container .answer-poll-row .percentage-bar {
     background: #d79d02;
     width: 100%;

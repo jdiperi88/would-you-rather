@@ -30,7 +30,7 @@ class New_Question extends Component{
         const { authedUser } = this.props
         return(
             <div className='new-question-container container'>
-             <h1>Create New Question</h1>
+             <h1>CREATE NEW QUESTION</h1>
              <div class='form-container' >
                 <h2>Would you rather ...?</h2>
                 <form>

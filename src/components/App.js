@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux'
 import { handleInitialData } from '../actions/shared';
 import Login from './Login'
@@ -30,17 +30,19 @@ class App extends Component {
                 <Redirect to='/dashboard' />
             )
             } />
-            {/* {
+            {
             authedUser === 'none'
             ?
             <Redirect to='/' />
             :
-            < Route exact path='/dashboard' component={QuestionContainer} />
-            } */}
+            <Fragment >
             < Route exact path='/new' component={New_Question} />
             < Route exact path='/dashboard' component={QuestionContainer} /> 
             < Route exact path='/leaderboard' component={Leaderboard} /> 
             < Route exact path='/question/:id' component={QuestionVote} /> 
+            </Fragment>
+            }
+
           </div>
         </Switch>
       </Router>
