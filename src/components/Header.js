@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { handleSetAuthedUser } from '../actions/authedUser'
 import { Link } from 'react-router-dom'
-
+import {NavLink} from 'react-router-dom'
 class Header extends Component{
     handleLogOut =() =>{
         const { dispatch } = this.props
@@ -15,13 +15,13 @@ class Header extends Component{
                 <nav>
                     <ul>
                         <li>
-                            <Link to='/' >Dashboard</Link>
+                            <NavLink to='/dashboard' activeClassName="active" >Dashboard</NavLink>
                         </li>
                         <li>
-                            <Link to='/new' >New Question</Link>
+                            <NavLink to='/new' activeClassName="active" >New Question</NavLink>
                         </li>
                         <li>
-                            <Link to='/leaderboard' >Leaderboard</Link>
+                            <NavLink to='/leaderboard' activeClassName="active" >Leaderboard</NavLink>
                         </li>
                     </ul>
                     {authedUser ==='none' 
@@ -31,9 +31,9 @@ class Header extends Component{
                         <p>Hello, {authedUser} </p>
                         &nbsp;
                         &nbsp;
-                        <Link to='/'  onClick={()=>{
+                        <NavLink to='/'  onClick={()=>{
                             this.handleLogOut();
-                        }}>Logout</Link>
+                        }}>Logout</NavLink>
                     </div>
                     }
 

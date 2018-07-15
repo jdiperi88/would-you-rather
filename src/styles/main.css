@@ -24,6 +24,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   line-height: 1; }
 
+a:visited {
+  color: black; }
+
 ol, ul {
   list-style: none; }
 
@@ -72,6 +75,8 @@ header {
   background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 47%, #b3bead 100%);
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.6);
   height: 5vh; }
+  header .active {
+    color: #d79d02; }
   header nav {
     display: flex;
     justify-content: space-between;
@@ -113,7 +118,8 @@ header {
 .question-list-container {
   border: #cfd2ce solid 2px;
   min-height: 10vh;
-  max-width: 800px; }
+  max-width: 800px;
+  margin-top: 20px; }
   .question-list-container h1 {
     text-transform: uppercase; }
   .question-list-container .answered-row {
@@ -174,6 +180,11 @@ header {
     flex: 1;
     padding: 20px; }
 
+.no-questions {
+  font-size: 2rem;
+  padding: 30px;
+  text-align: center; }
+
 .new-question-container {
   border: #cfd2ce solid 2px;
   max-width: 600px;
@@ -194,3 +205,15 @@ header {
     margin: 0 auto;
     display: block;
     margin-bottom: 10px; }
+
+.answer-poll-container h1 {
+  margin-top: 20px;
+  margin-right: 10px; }
+
+.answer-poll-container .answer-poll-row {
+  margin-bottom: 20px; }
+  .answer-poll-container .answer-poll-row .percentage-bar {
+    background: #d79d02;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center; }

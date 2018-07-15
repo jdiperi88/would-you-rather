@@ -33,6 +33,7 @@ class QuestionContainer extends Component{
                         className={`${answered ? 'active':''}`}
                     >ANSWERED</button>
                 </div>
+                {unansweredArr.length == 0 && answered !==true && <p className='no-questions'>You currently have no unanswered questions, Why don't you try to create some more!?</p>}
                 {answered 
                 ?
                 answeredArr.map(item=>{
