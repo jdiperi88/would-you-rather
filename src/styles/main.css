@@ -218,8 +218,12 @@ header {
 .answer-poll-container .answer-poll-row {
   margin-bottom: 20px;
   margin-right: 10px; }
-  .answer-poll-container .answer-poll-row .percentage-bar {
-    background: #d79d02;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center; }
+  .answer-poll-container .answer-poll-row .percentage-bar-container {
+    background: #cfd2ce;
+    width: 100%; }
+    .answer-poll-container .answer-poll-row .percentage-bar-container .percentage-bar {
+      background: #d79d02;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      white-space: nowrap; }

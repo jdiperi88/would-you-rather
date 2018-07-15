@@ -2,7 +2,7 @@ let users = {
   jdiperi: {
     id: 'jdiperi',
     name: 'Joey DiPeri',
-    avatarURL: '../images/sample_avatar.jpg',
+    avatarURL: '../images/jdiperi.jpg',
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionOne',

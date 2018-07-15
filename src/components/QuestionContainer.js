@@ -18,7 +18,7 @@ class QuestionContainer extends Component{
         })
     }
     render(){
-        const { questionsArr, authedUser, answeredArr, unansweredArr } = this.props
+        const { questionsArr, authedUser, answeredArr, unansweredArr, users } = this.props
         const { answered } = this.state
         return(
             <div className='question-list-container container'>
@@ -45,7 +45,7 @@ class QuestionContainer extends Component{
                                 user = {authedUser}
                                 answered = { answered }
                                 authedUser = {authedUser}
-                                 
+                                users = {users}
                             />
                 })
                 :
@@ -58,6 +58,7 @@ class QuestionContainer extends Component{
                                 user = {authedUser}
                                 answered = { answered }
                                 authedUser = {authedUser}
+                                users = {users}
                                  
                             />
                 })
@@ -66,7 +67,7 @@ class QuestionContainer extends Component{
         )
     }
 }
-const mapStateToProps = ({questions, authedUser}) =>{
+const mapStateToProps = ({questions, authedUser, users}) =>{
     // const questionsArr = Object.keys(questions).map(item=>{
     //     return {questionsArr[0][item]: questions.item}
     // })
@@ -83,6 +84,7 @@ const mapStateToProps = ({questions, authedUser}) =>{
         authedUser,
         answeredArr,
         unansweredArr,
+        users
     }
 }
 export default connect(mapStateToProps)(QuestionContainer)

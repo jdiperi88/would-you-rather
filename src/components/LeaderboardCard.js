@@ -10,7 +10,7 @@ class LeaderboardCard extends Component{
             <div className='question-container'>
                 <h1> {user}</h1>
                 <div className='question-details'>
-                    <img src={require('../images/sample_avatar.jpg')} />
+                    <img src={require(`../images/${user}.jpg`)} />
                     <div>
                         <p>Answered Questions:{answeredQuestions}</p>
                         <p>Created Questions:{createdQuestions}</p>
