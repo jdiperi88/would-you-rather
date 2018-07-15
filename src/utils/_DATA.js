@@ -14,7 +14,7 @@ let users = {
   sdiperi: {
     id: 'sdiperi',
     name: 'Saida DiPeri',
-    avatarURL: '../images/sample_avatar.jpg',
+    avatarURL: '../images/sdiperi.jpg',
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -24,7 +24,7 @@ let users = {
   tmac: {
     id: 'tmac',
     name: 'Tyrone Sanderson',
-    avatarURL: '../images/sample_avatar.jpg',
+    avatarURL: '../images/tmac.jpg',
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
