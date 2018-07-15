@@ -130,6 +130,11 @@ header {
   border-radius: 5px;
   width: 50%;
   margin: 20px auto; }
+  .question-container .radio-row {
+    display: flex;
+    align-items: center; }
+    .question-container .radio-row input {
+      margin-top: 10px; }
   .question-container h1 {
     background: #ddede9;
     padding: 10px;
@@ -151,6 +156,11 @@ header {
       flex: 4;
       text-align: center; }
       .question-container .question-details > div p {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        text-align: left;
+        padding-left: 20px; }
+      .question-container .question-details > div > div {
         margin-top: 10px;
         font-size: 1.2rem;
         text-align: left;

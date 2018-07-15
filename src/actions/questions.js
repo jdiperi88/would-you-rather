@@ -1,6 +1,7 @@
-import {_getQuestions, _saveQuestion} from '../utils/_DATA'
+import {_getQuestions, _saveQuestion, _saveQuestionAnswer} from '../utils/_DATA'
 export const GET_QUESTIONS = 'GET_QUESTIONS'
 export const ADD_QUESTION = 'ADD_QUESTION'
+export const SELECT_ANSWER = 'SELECT_ANSWER'
 
 
 function get_questions(questions){
@@ -33,6 +34,23 @@ export function handle_add_questions(questions){
         return _getQuestions()
                 .then(questions=>{
                     dispatch(add_questions(questions))
+                })
+    }
+}
+
+function select_answer(questions){
+    return {
+        type : SELECT_ANSWER,
+        questions
+    }
+}
+
+export function handle_select_answer(questions){
+    return(dispatch) =>{
+        _saveQuestionAnswer(questions).then(questions=>console.log(questions))
+        return _getQuestions()
+                .then(questions=>{
+                    dispatch(select_answer(questions))
                 })
     }
 }
