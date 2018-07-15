@@ -110,7 +110,8 @@ header {
 
 .question-list-container {
   border: #cfd2ce solid 2px;
-  min-height: 10vh; }
+  min-height: 10vh;
+  max-width: 800px; }
   .question-list-container h1 {
     text-transform: uppercase; }
   .question-list-container .answered-row {
@@ -128,7 +129,7 @@ header {
   border: black solid 2px;
   box-shadow: 5px 5px 20px black;
   border-radius: 5px;
-  width: 50%;
+  width: 60%;
   margin: 20px auto; }
   .question-container .radio-row {
     display: flex;

@@ -21,7 +21,7 @@ class Header extends Component{
                             <Link to='/new' >New Question</Link>
                         </li>
                         <li>
-                            Leaderboard
+                            <Link to='/leaderboard' >Leaderboard</Link>
                         </li>
                     </ul>
                     {authedUser ==='none' 
