@@ -15,7 +15,7 @@ class LeaderboardCard extends Component{
                         <p>Answered Questions:{answeredQuestions}</p>
                         <p>Created Questions:{createdQuestions}</p>
                     </div>
-                    <div>
+                    <div className='score'>
                         <h1>Score</h1>
                         <h2>{totalScore}</h2>
                     </div>

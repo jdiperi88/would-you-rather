@@ -71,16 +71,18 @@ class QuestionVote extends Component{
                         <div className={`answer-poll-row ${optionSelected ?'active':''}`}>
                             <p>Option 1: {option1text}</p>
                             <div className='percentage-bar-container'>
+                                <p>{`${Math.floor((option1Votes/totalVotes*100))}%`} {option1Votes} of {totalVotes} Votes </p>
                                 <div className='percentage-bar' style={{width:`${(option1Votes/totalVotes*100)}%`}}>
-                                    {`${Math.floor((option1Votes/totalVotes*100))}%`} {option1Votes} of {totalVotes} Votes 
+                                    
                                 </div> 
                             </div>
                         </div>
                         <div className={`answer-poll-row ${optionSelected ?'active':''}`}>
                             <p>Option 2: {option2text}</p>
                             <div className='percentage-bar-container'>
+                                <p>{`${Math.floor((option2Votes/totalVotes*100))}%`} {option2Votes} of {totalVotes} Votes </p>
                                 <div className='percentage-bar' style={{width:`${(option2Votes/totalVotes*100)}%`}}>
-                                    {`${Math.floor((option2Votes/totalVotes*100))}%`} {option2Votes} of {totalVotes} Votes 
+                                    
                                 </div> 
                             </div>
                         </div>

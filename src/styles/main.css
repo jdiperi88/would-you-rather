@@ -157,7 +157,8 @@ header {
     background: rgba(221, 237, 233, 0.2);
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    flex-direction: column; }
     .question-container .question-details button {
       background: #d79d02;
       padding: 10px;
@@ -190,6 +191,11 @@ header {
   padding: 30px;
   text-align: center; }
 
+.score {
+  padding: 10px; }
+  .score h2 {
+    padding: 10px; }
+
 .new-question-container {
   border: #cfd2ce solid 2px;
   max-width: 600px;
@@ -211,19 +217,28 @@ header {
     display: block;
     margin-bottom: 10px; }
 
-.answer-poll-container h1 {
-  margin-top: 20px;
-  margin-right: 10px; }
-
-.answer-poll-container .answer-poll-row {
-  margin-bottom: 20px;
-  margin-right: 10px; }
-  .answer-poll-container .answer-poll-row .percentage-bar-container {
-    background: #cfd2ce;
-    width: 100%; }
-    .answer-poll-container .answer-poll-row .percentage-bar-container .percentage-bar {
-      background: #d79d02;
+.answer-poll-container {
+  width: 60%; }
+  .answer-poll-container h1 {
+    margin-top: 20px;
+    margin-right: 10px; }
+  .answer-poll-container .answer-poll-row {
+    margin-bottom: 20px;
+    margin-right: 10px; }
+    .answer-poll-container .answer-poll-row .percentage-bar-container {
+      background: #cfd2ce;
       width: 100%;
-      padding: 20px 0;
-      text-align: center;
-      white-space: nowrap; }
+      position: relative; }
+      .answer-poll-container .answer-poll-row .percentage-bar-container p {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translate(-50%, -100%); }
+      .answer-poll-container .answer-poll-row .percentage-bar-container .percentage-bar {
+        background: #d79d02;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        white-space: nowrap; }

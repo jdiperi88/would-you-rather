@@ -36,10 +36,10 @@ class App extends Component {
             <Redirect to='/' />
             :
             <Fragment >
-            < Route exact path='/new' component={New_Question} />
-            < Route exact path='/dashboard' component={QuestionContainer} /> 
-            < Route exact path='/leaderboard' component={Leaderboard} /> 
-            < Route exact path='/question/:id' component={QuestionVote} /> 
+              < Route exact path='/new' component={New_Question} />
+              < Route exact path='/dashboard' component={QuestionContainer} /> 
+              < Route exact path='/leaderboard' component={Leaderboard} /> 
+              < Route exact path='/question/:id' component={QuestionVote} /> 
             </Fragment>
             }
 
